@@ -16,13 +16,13 @@ const ChatBox = () => {
     const [messages, setMessages] = useState([]);
     const scroll = useRef();
 
-    const SendMessage = ({scroll}) => {
-        const sendMessage = async(event) => {
-            setMessages("");
-            scroll.current.scrollIntoView({behavior: "smooth"})
-        }
+    // const SendMessage = ({scroll}) => {
+    //     const sendMessage = async(event) => {
+    //         setMessages("");
+    //         scroll.current.scrollIntoView({behavior: "smooth"})
+    //     }
 
-    }
+    // }
 
     useEffect(() => {
         const q=query(
