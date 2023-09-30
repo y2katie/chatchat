@@ -19,6 +19,7 @@ const Welcome = () => {
   };
 
   return (
+    
     <Segment placeholder>
     <Grid columns={1} stackable textAlign='center'>
       <Divider vertical>Welcome to React Chat.</Divider>
