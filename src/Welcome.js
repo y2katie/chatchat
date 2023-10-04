@@ -6,6 +6,7 @@ import {
   Divider,
   Grid,
   Header,
+  Container,
   Icon,
   Search,
   Segment,
@@ -19,33 +20,23 @@ const Welcome = () => {
   };
 
   return (
-    
-    <Segment placeholder>
-    <Grid columns={1} stackable textAlign='center'>
-      <Divider vertical>Welcome to React Chat.</Divider>
-
-      <Grid.Row verticalAlign='middle'>
-        <Grid.Column>
-          <Header icon>
+    <Container>
+      <Grid columns={1} stackable padded textAlign="center">
+        <h1> Welcome to React Chat </h1>
         
-
-          <Button className="sign-in" color='google plus'>
-      <Icon onClick={googleSignIn}
-          src={GoogleSignin} name='google plus' /> Google Plus
-   
+    
+        <h4> Do whatever you want when you want to.</h4>
       
-      </Button>
-      <p>Sign in with Google to chat with with your fellow React Developers.</p>
-          </Header>
-
-        </Grid.Column>
-        </Grid.Row>
-
-    </Grid>
-  </Segment>
+        <p>
+          Sign in with Google to chat with with your fellow React Developers.
+          <Button className="sign-in" color="google plus" onClick={googleSignIn} >
+          <Icon src={GoogleSignin} name="google plus" />{" Sign In"}
+        
+        </Button>
+        </p>
+        </Grid>
+    </Container>
   );
 };
 
 export default Welcome;
-
-

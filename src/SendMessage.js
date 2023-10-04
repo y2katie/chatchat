@@ -19,11 +19,13 @@ const SendMessage = () => {
             text: message,
             name: displayName,
             avatar: photoURL,
-            createdAt: serverTimestamp(),
-            uid
+            id: uid,
+            createdAt: serverTimestamp()
         });
         setMessage("");
     };
+
+   
 
     return (
         <form onSubmit={(event) => sendMessage(event)} className="send-message">

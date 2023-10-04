@@ -42,3 +42,7 @@ const NavBar = () => {
   );
 };
 export default NavBar;
+
+
+//delte someone in chat
+//chat background be different color

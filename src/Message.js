@@ -1,11 +1,27 @@
-import React from "react";
-import { auth } from "./firebase";
-import { Message, Image, Comment, Icon, Divider } from "semantic-ui-react";
+import {useEffect, Rect}  from "react";
+import { auth, firebase } from "./firebase";
+import { doc, deleteDoc } from "firebase/firestore";
+import { Message, Image, Comment,Button, Icon, Divider } from "semantic-ui-react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import MenuExampleBasic from "./Menu.js"
+import { db } from "./firebase";
+// import DeleteMessage from "./DeleteMessage"
 
-const Bubble = ({ message }) => {
+const Bubble = ({ message, id }) => {
     const [user] = useAuthState(auth);
+
+    console.log(message.id)
+
+  
+    const handleDelete = async () => {
+      const taskDocRef = doc(db, 'messages', `${message.id}`)
+      try{
+        await deleteDoc(taskDocRef)
+      } catch (err) {
+        alert(err)
+      }
+    }
+    
+ 
 return(  
 <>
 <Comment.Group size="large">
@@ -14,18 +30,20 @@ return(
       <Comment.Content>
         <Comment.Author>{message.name}</Comment.Author>
         <Comment.Metadata>
-          <div>{new Date(message.createdAt.seconds * 1000).toLocaleDateString("en-US")}</div>
-        
-          <div>
+        <div>
             <Icon name='star' />5 Faves
           </div>
         </Comment.Metadata>
         <Comment.Text>
          {message.text}
         </Comment.Text>
+        <Button onClick={handleDelete}> Delete</Button>
       </Comment.Content>
     </Comment>
+    
   </Comment.Group>
+  <Button> Delete </Button>
+
   <Divider />
   </>
 )
