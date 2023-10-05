@@ -16,13 +16,6 @@ const ChatBox = () => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
 
-  // const SendMessage = ({scroll}) => {
-  //     const sendMessage = async(event) => {
-  //         setMessages("");
-  //         scroll.current.scrollIntoView({behavior: "smooth"})
-  //     }
-
-  // }
 
   useEffect(() => {
     const q = query(
@@ -31,13 +24,7 @@ const ChatBox = () => {
       limit(5)
     );
 
-    // const deleteThis = () => {
-    //     db.collection("messages").doc(`${messages.id}`).delete().then(() => {
-    //         console.log("Document successfully deleted!");
-    //     }).catch((error) => {
-    //         console.error("Error removing document: ", error);
-    //     });
-    // }
+  
 
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
