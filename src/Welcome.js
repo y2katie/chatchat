@@ -8,6 +8,7 @@ import {
   Header,
   Container,
   Icon,
+  Image,
   Search,
   Segment,
 } from "semantic-ui-react";
@@ -22,19 +23,36 @@ const Welcome = () => {
   return (
     <Container>
       <Grid columns={1} stackable padded textAlign="center">
-        <h1> Welcome to React Chat </h1>
-        
-    
-        <h4> Do whatever you want when you want to.</h4>
-      
+      <Header size='medium'>Welcome to React Chat</Header>
+        <Divider horizontal>
+          <Header as="h4">
+            <Icon/>
+            Sign in with Google to chat with with your fellow React Developers.
+
+         
+          </Header>
+        </Divider>
+        <Button
+            className="sign-in"
+            color="google plus"
+            onClick={googleSignIn}
+          >
+            <Icon src={GoogleSignin} name="google plus" />
+            {" Sign In"}
+          </Button>
+
         <p>
-          Sign in with Google to chat with with your fellow React Developers.
-          <Button className="sign-in" color="google plus" onClick={googleSignIn} >
-          <Icon src={GoogleSignin} name="google plus" />{" Sign In"}
-        
-        </Button>
+
         </p>
-        </Grid>
+
+        
+
+        <Image
+          src="https://hips.hearstapps.com/hmg-prod/images/check-out-this-new-app-i-downloaded-royalty-free-image-1658764612.jpg"
+          fluid
+          rounded
+        />
+      </Grid>
     </Container>
   );
 };
