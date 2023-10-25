@@ -49,7 +49,7 @@ const Bubble = ({ message, id }) => {
               </div>
             </Comment.Metadata>
             {/* <p> Date is: {date} </p> */}
-            <p>{new Date( message.createdAt.seconds * 1000 + message.createdAt.nanoseconds / 1000, ).toLocaleDateString()}</p>
+            {/* <p>{new Date( message.createdAt.seconds * 1000 + message.createdAt.nanoseconds / 1000, ).toLocaleDateString()}</p> */}
             {/* <p> {new Date(message.createdAt * 1000).toLocaleDateString("en-US")}</p> */}
             <Comment.Text>{message.text}</Comment.Text>
             <Button onClick={handleDelete}> Delete</Button>
