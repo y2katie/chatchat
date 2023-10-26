@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       <Menu secondary>
-        <Menu.Item name="editorials">Home</Menu.Item>
+        <Menu.Item name="editorials" className= "logo">NovaChat</Menu.Item>
 
         <Menu.Item name="reviews">About</Menu.Item>
 

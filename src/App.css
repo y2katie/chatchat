@@ -1,6 +1,47 @@
-
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 .ui.comments .comment .avatar img, .ui.comments .comment img.avatar {
   border-radius: 50%;
+}
+
+body {
+  background-color:#fcf5eb;
+}
+
+.main-text {
+  position:absolute !important;
+  margin-top:90px !important;
+}
+
+.logo{
+  font-weight:700 !important;
+  color:#b1a198 !important;
+}
+
+.ui.teal.button, .ui.teal.buttons .button {
+  background-color: #b1a198 !important;
+}
+
+.ui.secondary.menu {
+ margin-top:10px;
+}
+
+h1, h4 {
+  color: white !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h4 {
+  margin-top: -40px !important;
+}
+
+h1 {
+  padding: 40px !important;
+  font-size: 40px !important;
+}
+
+img {
+  border-radius:30px;
+  position:relative;
 }
 
 .App-logo {
