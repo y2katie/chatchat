@@ -12,6 +12,12 @@ body {
   margin-top:90px !important;
 }
 
+.chat-box {
+  background-color: #fff !important;
+  padding: 40px !important;
+  border-radius: 10px !important;
+}
+
 .logo{
   font-weight:700 !important;
   color:#b1a198 !important;

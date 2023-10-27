@@ -56,7 +56,6 @@ const Bubble = ({ message, id }) => {
           </Comment.Content>
         </Comment>
       </Comment.Group>
-      <Button> Delete </Button>
 
       <Divider />
     </>

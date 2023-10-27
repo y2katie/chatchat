@@ -49,7 +49,6 @@ const ChatBox = () => {
         ))}
         <Divider />
       </div>
-      <Button> Delete </Button>
 
       {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
       <span ref={scroll}></span>
