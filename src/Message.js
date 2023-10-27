@@ -16,7 +16,6 @@ import { db } from "./firebase";
 const Bubble = ({ message, id }) => {
   const [user] = useAuthState(auth);
 
-  console.log(message.id);
 
   const handleDelete = async () => {
     const taskDocRef = doc(db, "messages", `${message.id}`);
@@ -34,8 +33,8 @@ const Bubble = ({ message, id }) => {
 // }
 
   // setDate(`${message.id}`.createdAt.toDate().toString())
+let dateUs = new Date(0).toLocaleDateString("en-US");
 
-  console.log(message.createdAt)
   return (
     <>
       <Comment.Group size="large">
@@ -48,7 +47,7 @@ const Bubble = ({ message, id }) => {
                 <Icon name="star" />5 Faves
               </div>
             </Comment.Metadata>
-            {/* <p> Date is: {date} </p> */}
+            <p> Posted: is: {dateUs} </p>
             {/* <p>{new Date( message.createdAt.seconds * 1000 + message.createdAt.nanoseconds / 1000, ).toLocaleDateString()}</p> */}
             {/* <p> {new Date(message.createdAt * 1000).toLocaleDateString("en-US")}</p> */}
             <Comment.Text>{message.text}</Comment.Text>

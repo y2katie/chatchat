@@ -20,6 +20,11 @@ const Welcome = () => {
     signInWithRedirect(auth, provider);
   };
 
+
+  const signOut = () => {
+    auth.signOut();
+  };
+
   return (
     <>
       <Container style={{position:"absolute", marginTop:"90px", zIndex:"2000"}}>
